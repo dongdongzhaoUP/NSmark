@@ -1,6 +1,6 @@
 # README
 Official Code for Paper "NSmark: Null Space Based Black-box Watermarking Defense Framework for Pre-trained Language Models".
-![](overview.jpg)
+![](overview.png)
 ## Environment Setup
 
 To set up the environment, please refer to `requirements.txt` in python environment.
