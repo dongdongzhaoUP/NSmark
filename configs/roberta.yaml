@@ -1,0 +1,94 @@
+config_description: "
+----------------------------------------------
+
+----------------------------------------------
+"
+
+save_dir: "./results/wbw/test"
+seed: 42
+debug:  false 
+file_name: "wiki0611-SM-0.5"  
+verify_plm: true 
+dataset:
+        pretrain: wikitext-2 
+        downstream: [sst2,sst5, offenseval, lingspam, agnews] 
+        num_labels: [2, 5, 2, 2, 4] 
+        verify: sst2
+        verify_size: 1500
+---
+victim:
+        Q_path:  "Q/768_768.pt"
+        type: "mlm"  
+        model: "roberta"  
+        path:  Models/roberta-base
+        do_train: True
+        cache_dir: "./models"
+        key_path : 
+        num_labels: 
+        data_type:
+---
+surrogate:
+        type: "mlm"  
+        model: "roberta" 
+        path:  "Models/roberta-base" 
+        cache_dir: "./models"
+---
+LFEA_copy:
+        Q_path:  Q/768_768.pt
+        type: "Qmlm"  
+        model: "roberta"  
+        cache_dir: "./models"
+---
+poisoner:
+        method: "wbw"   
+        poison_rate: 1.0   
+        target_label: None  
+        triggers: ["louvre"]  
+        insert_num: 5
+        poison_dataset_num: 1  
+---
+pretrain_trainer:
+        method: "wbw"  
+        epochs: 10
+        batch_size: 4
+        lr: "1e-4"
+        lr_dec : "1e-4" 
+        weight_decay: 0
+        warm_up_epochs: 0
+        gradient_accumulation_steps: 8
+        max_grad_norm: 1.0
+        ckpt_name: "pretrain_model.ckpt"      
+        proj_ckpt_name: "decoder_model.ckpt"    
+        sig_name: "sig.pt"
+        sm_name: "sm.pt"
+        sig_sm_name: "sig_sm.pt"
+        trigger_name: "trigger.txt"
+        triggers:  ["louvre"] 
+        fidelity_loss: "mse"  
+        embed_loss: "mse"  
+        use_ori_loss: True
+        mlm_loss: true
+---   
+downstream_trainer:
+        method: "finetune_wbw"  
+        freeze_plm:  False   
+        epochs: 3
+        batch_size: 8
+        lr: "2e-5"
+        weight_decay: 0
+        warm_up_epochs: 3
+        gradient_accumulation_steps: 2
+        max_grad_norm: 1.0
+        ckpt_name: "finetune_model.ckpt"
+        fidelity_loss: "mse"  
+        embed_loss: "mse"  
+---
+attack:
+        overwrite: True 
+        prune: True 
+        prune_perc: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.99] 
+        finetune: True 
+        finetune_LFEA: True 
+        finetune_surrogate:  True 
+        finetune_prune: True   
+        LFEA_attack:  True 

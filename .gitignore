@@ -1,7 +1,27 @@
+#ignore files in nsmark:
+cache/
+MultipleChoice/
+models/
+Models*/
+Results*
+wbw/
+out*
+*tsv
+*pkl
+# *.sh
+trash*/
+pretrained_model/
+overwrited_model/
+#yaml file 
+#.sh file
+*.doc
+# *.yaml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
 
 # C extensions
 *.so
@@ -49,7 +69,6 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
-cover/
 
 # Translations
 *.mo
