@@ -29,6 +29,7 @@ Modify the args in `run.sh` to run this script.
 ## Trigger Selection
 To bind the trigger words with user information, you can refer to `sign.py`. For convenience, trigger word is specified for experimentation.
 
+
 ## Citing NSmark
 
 ```
