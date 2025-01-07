@@ -1,4 +1,10 @@
-# README
+<div align="center">
+  <h2 align="center">NSmark: Null Space Based Black-box Watermarking Defense Framework for Pre-trained Language Models</h2>
+  <a href="https://arxiv.org/abs/2410.13907" style="display: inline-block; text-align: center;">
+      <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2412.02454-b31b1b.svg?style=flat">
+  </a>
+</div>
+
 Official Code for Paper "NSmark: Null Space Based Black-box Watermarking Defense Framework for Pre-trained Language Models".[link](https://arxiv.org/abs/2410.13907)
 
 ![](overview.png)
