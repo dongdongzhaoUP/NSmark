@@ -1,11 +1,8 @@
 <div align="center">
-  <h2 align="center">NSmark: Null Space Based Black-box Watermarking Defense Framework for Pre-trained Language Models</h2>
-  <a href="https://arxiv.org/abs/2410.13907" style="display: inline-block; text-align: center;">
-      <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2412.02454-b31b1b.svg?style=flat">
-  </a>
+  <h2 align="center">NSmark: Null Space Based Black-box Watermarking Defense Framework for Language Models</h2>
 </div>
 
-Official Code for Paper "NSmark: Null Space Based Black-box Watermarking Defense Framework for Pre-trained Language Models".[link](https://arxiv.org/abs/2410.13907)
+Official Code for Paper "NSmark: Null Space Based Black-box Watermarking Defense Framework for Language Models".
 
 ![](overview.png)
 ## Environment Setup
@@ -35,17 +32,6 @@ Modify the args in `run.sh` to run this script.
 ## Trigger Selection
 To bind the trigger words with user information, you can refer to `sign.py`. For convenience, trigger word is specified for experimentation.
 
-
-## Citing NSmark
-
-```
-@article{zhao2024nsmarknullspacebased,
-  title={NSmark: Null Space Based Black-box Watermarking Defense Framework for Pre-trained Language Models},
-  author={Zhao, Haodong and Hu, Jinming and Li, Peixuan and Li, Fangqi and Sha, Jinrui and Chen, Peixuan and Zhang, Zhuosheng and Liu, Gongshen},
-  journal={arXiv preprint arXiv:2410.13907},
-  year={2024}
-}
-```
 
 ## License
 
