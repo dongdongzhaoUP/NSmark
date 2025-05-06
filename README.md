@@ -1,8 +1,8 @@
 <div align="center">
-  <h2 align="center">NSmark: Null Space Based Black-box Watermarking Defense Framework for Language Models</h2>
+  <h2 align="center">NSmark: Null Space Based Backdoor Watermarking Framework for Protecting Language Models</h2>
 </div>
 
-Official Code for Paper "NSmark: Null Space Based Black-box Watermarking Defense Framework for Language Models".
+Official Code for Paper "NSmark: Null Space Based Backdoor Watermarking Framework for Protecting Language Models".
 
 ![](overview.png)
 ## Environment Setup
