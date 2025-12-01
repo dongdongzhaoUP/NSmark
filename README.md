@@ -1,11 +1,4 @@
-<div align="center">
-  <h2 align="center">NSmark: Null Space Based Backdoor Watermarking Framework for Protecting Language Models</h2>
-  <a href="https://arxiv.org/abs/2410.13907" style="display: inline-block; text-align: center;">
-      <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2410.13907-b31b1b.svg?style=flat">
-  </a>
-</div>
-
-Official Code for Paper "NSmark: Null Space Based Backdoor Watermarking Framework for Protecting Language Models".[link](https://arxiv.org/abs/2410.13907)
+Official Code for **Paper Resilient Output-Space Watermarking for Language Models via Null-Space Invariants**, which is under review. The previous preprint version on arXiv is this [link](https://arxiv.org/abs/2410.13907).
 
 ![](overview.png)
 ## Environment Setup
@@ -36,7 +29,7 @@ Modify the args in `run.sh` to run this script.
 To bind the trigger words with user information, you can refer to `sign.py`. For convenience, trigger word is specified for experimentation.
 
 
-## Citing NSmark
+## Citing NSmark preprint version
 
 ```
 @article{zhao2024nsmarknullspacebased,
