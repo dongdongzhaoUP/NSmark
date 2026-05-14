@@ -1,10 +1,3 @@
-<div align="center">
-  <h2 align="center">NSmark: Null Space Based Backdoor Watermarking Framework for Protecting Language Models</h2>
-</div>
-
-Official Code for Paper "NSmark: Null Space Based Backdoor Watermarking Framework for Protecting Language Models".
-
-![](overview.png)
 ## Environment Setup
 
 To set up the environment, please refer to `requirements.txt` in python environment.
